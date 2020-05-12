@@ -1,27 +1,22 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class GameManager : Singleton<GameManager>
 {
-    private static GameManager instance;
-    public static GameManager Instance { get { return instance; } }
-    
-    void Awake ()
-    {
-        DontDestroyOnLoad(this);
-        
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
+    public static SceneController SceneController;
 
+    void Awake()
+    {
+        SceneController = gameObject.AddComponent<SceneController>();
+    }
+    
     private void Start()
     {
-        SceneController.Instance.LoadScene("Title");
+        SceneController.LoadScene("Title");
+    }
+    
+    public void LoadScene(string sceneName)
+    {
+        SceneController.LoadScene(sceneName);
     }
 }
