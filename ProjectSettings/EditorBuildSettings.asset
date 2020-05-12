@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/_Preload.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Title.unity
+    guid: de4cd315772558c4693f5d99e3c8b63e
+  - enabled: 1
+    path: Assets/Scenes/Orbit.unity
+    guid: 651a91963cba95547bcc7fbd70c9c6ed
+  - enabled: 1
+    path: Assets/Scenes/Land.unity
+    guid: 8fb7ae2b91698e14b98b6bdfd9b79315
   m_configObjects: {}
