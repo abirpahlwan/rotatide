@@ -8,6 +8,8 @@ public class Center : MonoBehaviour
         public const float MEDIUM = 2.5f;
         public const float SMALL = 1.2f;
     }
+
+    [SerializeField] private GameObject[] orbiters;
     
     void Start()
     {
