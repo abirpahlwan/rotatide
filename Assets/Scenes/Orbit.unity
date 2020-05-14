@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 005ef1237894ebc4fa180282330580ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  orbiters: []
+  orbits: []
 --- !u!4 &489469009
 Transform:
   m_ObjectHideFlags: 0
@@ -161,7 +161,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 942621521}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -174,6 +175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 942621521}
+  - component: {fileID: 942621522}
   m_Layer: 0
   m_Name: SunOrbit
   m_TagString: Untagged
@@ -194,9 +196,22 @@ Transform:
   m_Children:
   - {fileID: 9110065052167834551}
   - {fileID: 1032913502}
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_Father: {fileID: 489469009}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &942621522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942621520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a904443f6b0d8a4bbea9719f61abc9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orbitSpeed: 25
 --- !u!1 &1032913501
 GameObject:
   m_ObjectHideFlags: 0

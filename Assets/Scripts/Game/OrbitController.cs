@@ -13,7 +13,7 @@ public class OrbitController : MonoBehaviour
     
     void Start()
     {
-        // orbiters = GetComponentsInChildren<Orbit>();
+        orbits = GetComponentsInChildren<Orbit>();
     }
 
     void Update()
@@ -28,19 +28,20 @@ public class OrbitController : MonoBehaviour
                 // TODO Lerp position
                 // TODO Lerp scale
                 // TODO Lerp alpha
+                hit.transform.parent.position = Vector3.zero;
                 hit.transform.position = Vector3.zero;
                 
                 foreach (var orbiter in orbits)
                 {
-                    if (orbiter.transform.GetHashCode().Equals(hit.transform.GetHashCode()))
+                    if (orbiter.transform.GetChild(0).GetHashCode().Equals(hit.transform.GetHashCode()))
                     {
                         continue;
                     }
                     
-                    Color color = orbiter.gameObject.GetComponent<Renderer>().material.color;
+                    Color color = orbiter.transform.GetChild(0).gameObject.GetComponent<Renderer>().material.color;
                     color.a = 0;
-                    orbiter.gameObject.GetComponent<Renderer>().material.color = color;
-                    orbiter.gameObject.SetActive(false);
+                    orbiter.transform.GetChild(0).gameObject.GetComponent<Renderer>().material.color = color;
+                    orbiter.transform.GetChild(0).gameObject.SetActive(false);
                 }
             }
         }
