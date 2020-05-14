@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Center : MonoBehaviour
+public class OrbitController : MonoBehaviour
 {
     public static class Scale
     {
@@ -9,11 +9,11 @@ public class Center : MonoBehaviour
         public const float SMALL = 1.2f;
     }
 
-    [SerializeField] private Orbit[] orbiters;
+    [SerializeField] private Orbit[] orbits;
     
     void Start()
     {
-        orbiters = FindObjectsOfType<Orbit>();
+        // orbiters = GetComponentsInChildren<Orbit>();
     }
 
     void Update()
@@ -30,16 +30,17 @@ public class Center : MonoBehaviour
                 // TODO Lerp alpha
                 hit.transform.position = Vector3.zero;
                 
-                foreach (var orbit in orbiters)
+                foreach (var orbiter in orbits)
                 {
-                    if (orbit.transform.GetHashCode().Equals(hit.transform.GetHashCode()))
+                    if (orbiter.transform.GetHashCode().Equals(hit.transform.GetHashCode()))
                     {
                         continue;
                     }
                     
-                    Color color = orbit.gameObject.GetComponent<Renderer>().material.color;
+                    Color color = orbiter.gameObject.GetComponent<Renderer>().material.color;
                     color.a = 0;
-                    orbit.gameObject.GetComponent<Renderer>().material.color = color;
+                    orbiter.gameObject.GetComponent<Renderer>().material.color = color;
+                    orbiter.gameObject.SetActive(false);
                 }
             }
         }
