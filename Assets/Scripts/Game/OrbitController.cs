@@ -28,9 +28,13 @@ public class OrbitController : MonoBehaviour
                 // TODO Lerp position
                 // TODO Lerp scale
                 // TODO Lerp alpha
+                hit.transform.parent.parent = null;
                 hit.transform.parent.position = Vector3.zero;
+                DontDestroyOnLoad(hit.transform.parent);
+                
                 hit.transform.position = Vector3.zero;
                 
+                // Hide other planets
                 foreach (var orbiter in orbits)
                 {
                     if (orbiter.transform.GetChild(0).GetHashCode().Equals(hit.transform.GetHashCode()))
@@ -42,7 +46,11 @@ public class OrbitController : MonoBehaviour
                     color.a = 0;
                     orbiter.transform.GetChild(0).gameObject.GetComponent<Renderer>().material.color = color;
                     orbiter.transform.GetChild(0).gameObject.SetActive(false);
+                    
                 }
+                
+                // Load next scene
+                GameManager.Instance.LoadScene("Land");
             }
         }
     }

@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 
 public class Rocket : MonoBehaviour
@@ -18,5 +17,14 @@ public class Rocket : MonoBehaviour
         float distCovered = (Time.time - startTime);
         float fractionOfJourney = distCovered / journeyLength;
         transform.position = Vector3.Lerp(transform.position, Vector3.zero, fractionOfJourney);
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Collision");
+        if (other.gameObject.tag.Equals("Planet"))
+        {
+            Debug.Log("Game Over");
+        }
     }
 }
