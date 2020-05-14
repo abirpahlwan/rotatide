@@ -150,10 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 005ef1237894ebc4fa180282330580ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  orbiters:
-  - {fileID: 3931506556722745021, guid: 069c597702c9819408d5731bc5fc779b, type: 3}
-  - {fileID: 5834472091488484792, guid: 54544f3602f7a744e8e6be3bdd912b94, type: 3}
-  - {fileID: 15000052287183554, guid: 61be2e1b43c36064395e026877d37418, type: 3}
+  orbiters: []
 --- !u!4 &489469009
 Transform:
   m_ObjectHideFlags: 0
