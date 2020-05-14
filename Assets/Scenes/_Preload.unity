@@ -336,8 +336,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 394091812}
-  - component: {fileID: 394091813}
   - component: {fileID: 394091814}
+  - component: {fileID: 394091813}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -876,7 +876,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1163387137}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1568061058}
+        m_MethodName: OnClickRestartButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1163387137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -996,9 +1007,9 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1260424799}
   m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 0
-  m_BlocksRaycasts: 0
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
 --- !u!1 &1568061052
 GameObject:
@@ -1126,6 +1137,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 369fbf3fce9d43d4aba33d9b104fd34b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeline: {fileID: 2137632201}
+  gameover: {fileID: 1260424803}
 --- !u!1 &1583678460
 GameObject:
   m_ObjectHideFlags: 0

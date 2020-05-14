@@ -5,6 +5,8 @@ public class Rocket : MonoBehaviour
 {
     private float startTime;
     private float journeyLength;
+
+    public Action OnGameOver;
     
     void Start()
     {
@@ -21,10 +23,9 @@ public class Rocket : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Collision");
         if (other.gameObject.tag.Equals("Planet"))
         {
-            Debug.Log("Game Over");
+            UIController.Instance.GameOver();
         }
     }
 }
