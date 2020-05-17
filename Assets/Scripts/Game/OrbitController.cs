@@ -50,7 +50,7 @@ public class OrbitController : MonoBehaviour
                 }
                 
                 // Load next scene
-                GameManager.Instance.LoadScene("Land");
+                SceneController.Instance.LoadScene("Land");
             }
         }
     }
