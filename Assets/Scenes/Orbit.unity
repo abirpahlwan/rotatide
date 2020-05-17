@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a904443f6b0d8a4bbea9719f61abc9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  orbitSpeed: 25
+  orbitSpeed: 0
 --- !u!1 &1032913501
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,7 +257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a904443f6b0d8a4bbea9719f61abc9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  orbitSpeed: 25
+  orbitSpeed: 50
 --- !u!1 &1302843078
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,7 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a904443f6b0d8a4bbea9719f61abc9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  orbitSpeed: 25
+  orbitSpeed: 80
 --- !u!33 &209471567226679
 MeshFilter:
   m_ObjectHideFlags: 0
