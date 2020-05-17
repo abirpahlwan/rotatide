@@ -509,6 +509,7 @@ GameObject:
   - component: {fileID: 5822522651337533240}
   - component: {fileID: 8746485781535007903}
   - component: {fileID: 2997147946254533652}
+  - component: {fileID: 5834472090237285971}
   m_Layer: 0
   m_Name: Earth
   m_TagString: Planet
@@ -516,6 +517,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!122 &5834472090237285971
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5834472090237285970}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4285613877
+  m_Size: 1.6
 --- !u!135 &8743031890483758107
 SphereCollider:
   m_ObjectHideFlags: 0
